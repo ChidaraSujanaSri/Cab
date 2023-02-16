@@ -1,0 +1,48 @@
+<table>
+    
+    <tr>
+        <td> Enter  Cab Id </td>
+        <td> <input type="text" #cabId/> </td>
+    </tr>
+    <tr>
+        <td> Enter  Cab Name </td>
+        <td> <input type="text" #cabName/> </td>
+    </tr>
+    <tr>
+        <td>Category</td>
+        <td> 
+            <select #category>
+                <option> Mini </option>
+                <option> Prime Seden </option>
+                <option> Prime SUV </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td> Cab Driver Name </td>
+        <td> <input type="text" #driver/> </td>
+    </tr>
+    <tr>
+        <td> Rating </td>
+        <td> <input type="text" #rating/> </td>
+    </tr>
+    <tr>
+        <td> Cab Description </td>
+        <td> <input type="text" #about/> </td>
+    </tr>
+
+    <tr>
+        <td> Image Name </td>
+        <td> <input type="text" #image/> </td>
+    </tr>
+    <tr>
+        <td> <input type="reset" value="Clear All"></td>
+        <td> <input type="button" 
+            (click)="readCab(cabId.value,cabName.value,category.value,driver.value,rating.value,about.value,image.value)"
+            value="Add Cab" /> </td>
+    </tr>
+
+
+</table>
+<br/>
+

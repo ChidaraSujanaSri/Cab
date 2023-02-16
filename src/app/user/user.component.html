@@ -1,0 +1,55 @@
+<div >
+    <table>
+        <tr>
+            <td>
+                Filter Cab by Category
+                    <select #category (change)="getFilterData(category.value)">
+                        <option> Mini </option>
+                        <option> Prime Seden </option>
+                        <option> Prime SUV </option>
+                    </select>
+            </td>
+        </tr>
+    </table>
+
+
+
+</div>
+
+
+
+<hr/>
+<div *ngFor="let c of allCab">
+<table>
+    <tr>
+        <td> <img src="/assets/images/{{c.imageName}}" alt="Cab image" width="120px" height="150px"> </td>
+        <td> 
+            <h2>{{c.cabName}} </h2>
+            <hr/>
+            <p> Cab Description:{{c.about|mypipe}} </p>
+            <hr/>
+            <span>Cab Rating <span [style]="c.rating<4?ratingLowCss:ratingNormalCSS" >{{c.rating}}    </span>  
+            <i *ngIf="c.rating>4"> 
+                
+                <span *ngIf="c.rating>4">
+                    <b style="color: blue; font-family: Georgia, 'Times New Roman', Times, serif;"><u> Recommended</u></b>
+                </span>
+            </i>    
+
+            </span> 
+            <br/>
+           
+            <hr/>
+            <button value="{{c.cabId}}" (click)="bookYourRide(cab.value)" #cab> Add Cab </button>
+            
+            <button value="{{c.cabId}}" (click)="viewCabDetails(cab.value)" #cab> view all </button>
+            
+
+        </td>
+
+    </tr>
+</table>
+</div>
+
+ 
+

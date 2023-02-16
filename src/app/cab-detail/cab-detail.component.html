@@ -1,0 +1,27 @@
+<img src="/assets/images/{{c.imageName}}" alt="Cab image" width="250px" height="250px">
+<h2 style="color: brown; font-style: italic;">{{c.cabName}} </h2>
+<table>
+    <tr>
+        
+        <td> 
+            
+            <p> {{c.about}} </p>
+            <hr/>
+            <span>Course Rating <span>{{c.rating}}    </span>  
+                <i *ngIf="c.rating>4"> 
+                    
+                    <span *ngIf="c.rating>4">
+                        <b style="color: blue; font-family: Georgia, 'Times New Roman', Times, serif;"><u> Recommended</u></b>
+                    </span>
+                </i> 
+        
+            </span> 
+            <br/>
+           
+           
+            
+        </td>
+        
+    </tr>
+</table>
+
